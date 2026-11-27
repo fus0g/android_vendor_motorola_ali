@@ -17727,3 +17727,19 @@ cc_prebuilt_binary {
 	soc_specific: true,
 }
 
+
+cc_prebuilt_library_shared {
+	name: "libutils-v32",
+	owner: "motorola",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libutils-v32.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	soc_specific: true,
+}

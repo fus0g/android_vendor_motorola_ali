@@ -1201,3 +1201,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.keymaster@3.0-service-qti \
     mm-qcamera-daemon
+
+# Android 12L libutils for pm-service (copied from prebuilts/vndk/v32)
+PRODUCT_PACKAGES += \
+    libutils-v32
