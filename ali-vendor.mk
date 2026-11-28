@@ -214,7 +214,6 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_wifihal \
     liblqe \
-    libmdmcutback \
     libmdmdetect \
     libmm-color-convertor \
     libmm-hdcpmgr \
@@ -1202,6 +1201,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service-qti \
     mm-qcamera-daemon
 
-# Android 12L libutils for pm-service (copied from prebuilts/vndk/v32)
+# libmdmcutback (used by libmotext_inf and qmi_motext_hook) and the old softap
+# libraries it links; system/qcom can no longer be built, so these are prebuilt
 PRODUCT_PACKAGES += \
-    libutils-v32
+    libmdmcutback \
+    libqsap_sdk \
+    libqsap_shim

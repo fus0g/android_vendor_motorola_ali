@@ -2154,26 +2154,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libmdmcutback",
-	owner: "motorola",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libmdmcutback.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libmdmcutback.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libmdmdetect",
 	owner: "motorola",
 	strip: {
@@ -17727,19 +17707,62 @@ cc_prebuilt_binary {
 	soc_specific: true,
 }
 
-
 cc_prebuilt_library_shared {
-	name: "libutils-v32",
+	name: "libmdmcutback",
 	owner: "motorola",
 	strip: {
 		none: true,
 	},
 	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libmdmcutback.so"],
+		},
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libutils-v32.so"],
+			srcs: ["proprietary/vendor/lib64/libmdmcutback.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libqsap_sdk",
+	owner: "motorola",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libqsap_sdk.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libqsap_sdk.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libqsap_shim",
+	owner: "motorola",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libqsap_shim.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libqsap_shim.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
 	soc_specific: true,
 }
